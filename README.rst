@@ -42,7 +42,7 @@ To run sharpo on your system you will need to install the following Python modul
 Installation
 ------------
 
-Once you have installed the required packeges, get a copy of sharpo either with
+Once you have installed the required packages, get a copy of sharpo either with
 git or using a zip archive.
 
   * Using git:

@@ -31,22 +31,20 @@ Installation Requirements
 
 To run sharpo on your system you will need to install the following Python modules:
 
-1) Python 2.7 (should also work with later versions, http://www.python.org)
-2) NumPy Library of high-level mathematical functions (http://www.numpy.org)
-3) Orbkit (https://orbkit.github.io/)
+1. Python 2.7 (should also work with later versions, http://www.python.org)
+2. NumPy Library of high-level mathematical functions (http://www.numpy.org)
+3. Orbkit (https://orbkit.github.io/)
    Orbkit additionally requires the following modules:
-3.1) Cython (http://cython.org/)
-3.2) SciPy Library of algorithms and mathematical tools (http://www.scipy.org)
-3.3) h5py Interface to the HDF5 binary data format (http://www.h5py.org/)
+   
+  a. Cython (http://cython.org/)
+  b. SciPy Library of algorithms and mathematical tools (http://www.scipy.org)
+  c. h5py Interface to the HDF5 binary data format (http://www.h5py.org/)
 
 Installation
 ------------
 
 Once you have installed the required packeges, get a copy of sharpo either with
-git or using a zip archive, It is strongly
-recommended to use git, since this version always contains the newest 
-bug fixes and features. If git is not available on your system, the newest 
-version can additionally be cloned from https://github.com/orbkit/orbkit.
+git or using a zip archive.
 
   * Using git:
 
@@ -57,11 +55,11 @@ version can additionally be cloned from https://github.com/orbkit/orbkit.
 No additional installation of sharpo is necessary. Once you got your copy of the
 code you can run sharpo e.g. directly from the command line in a terminal with::
 
-python sharpo.py
+$ python sharpo.py
 
 or even on its own by typing::
 
-sharpo.py
+$ sharpo.py
 
 Linux 
 .....
@@ -69,7 +67,7 @@ Linux
 (tested on ubuntu derivatives only) If you run linux, installation is quick and simple.
 You can install most of the above mentioned modules by executing the following commands::
 
-apt-get install python2.7-dev python-numpy python-scipy cython python-h5py
+$ apt-get install python2.7-dev python-numpy python-scipy cython python-h5py
 
 If you want to install python3 instead of 2.7 you have to change/add the version number in the
 package list.

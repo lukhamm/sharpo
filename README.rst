@@ -11,10 +11,13 @@ Citation
 --------
 If you use sharpo, you use orbkit. The authors of orbkit ask you to cite their work
 in the following way:
-Gunter Hermann, Vincent Pohl, Jean Christophe Tremblay, Beate Paulus, Hans-Christian Hege,
- and Axel Schild,
+
+Gunter Hermann, Vincent Pohl, Jean Christophe Tremblay, Beate Paulus, Hans-Christian Hege, and Axel Schild,
 "ORBKIT: A Modular Python Toolbox for Cross-Platform Postprocessing of Quantum Chemical Wavefunction Data", 
 *J. Comput. Chem.* **2016**, `DOI: 10.1002/jcc.24358`__.
+
+__ http://dx.doi.org/10.1002/jcc.24358
+
 For more info, please visit their website.
 
 Support

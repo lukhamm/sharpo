@@ -34,11 +34,10 @@ To run sharpo on your system you will need to install the following Python modul
 1. Python 2.7 (should also work with later versions, http://www.python.org)
 2. NumPy Library of high-level mathematical functions (http://www.numpy.org)
 3. Orbkit (https://orbkit.github.io/)
-   Orbkit additionally requires the following modules:
-   
-  a. Cython (http://cython.org/)
-  b. SciPy Library of algorithms and mathematical tools (http://www.scipy.org)
-  c. h5py Interface to the HDF5 binary data format (http://www.h5py.org/)
+   Orbkit additionally requires the following modules
+  1. Cython (http://cython.org/)
+  2. SciPy Library of algorithms and mathematical tools (http://www.scipy.org)
+  3. h5py Interface to the HDF5 binary data format (http://www.h5py.org/)
 
 Installation
 ------------

@@ -67,7 +67,7 @@ import mo_coefficients
 #---------------------------------
 # PROGRAM VERSION::
 #---------------------------------
-version = "0.3.3"
+version = "0.3.4"
 
 #---------------------------------
 # Check arguments
@@ -201,8 +201,10 @@ else:
   print ("Found %i MOs in your energy range." % (len(selected_MO)))
 
 
+
+
 #--------------------------------------------
-# Convert selected MOs into a orbkit-readable
+# Convert selected MOs into an orbkit-readable
 # qc-object
 #--------------------------------------------
 qc_select = qc.todict()
@@ -567,21 +569,23 @@ else:
     x[i] = xmin + xstep*float(i)
   
   for i_mos in range(0,len(all_c[0,:])):
-    if "_a" in qc.mo_spec[i_mos]["sym"]:                      #: select only alpha-spin orbitals
+    if "_a" in qc.mo_spec[selected_MO[i_mos]-1]["sym"]:                      #: select only alpha-spin orbitals
       for l in range(0, lmax+1):
-        gx[:,l] += all_c[l,i_mos] * (1./(sigma*numpy.sqrt(2.*numpy.pi))) * numpy.exp(-(1./(2.*sigma**2.))*(x[:] - 27.21138602*qc.mo_spec[i_mos]['energy'])**2.)
+        gx[:,l] += all_c[l,i_mos] * (1./(sigma*numpy.sqrt(2.*numpy.pi))) * numpy.exp(-(1./(2.*sigma**2.))*(x[:] - 27.21138602*qc.mo_spec[selected_MO[i_mos]-1]['energy'])**2.)
+        print (gx[:,l])
                                                                 #: gaussian function centred at orbital 
                                                                 #  energy (qc.mo_spec[i_mos]['energy'])
                                                                 #  of orbital i_mos with angular quantum
                                                                 #  number l
-                                                                
+
   #-------------------------
   # write x and gx to file 
   #---
   writeOutSmearedCoef(output_file, '.smeared.a.dat', numpy.column_stack((x-E_Fermi,gx)))
   
   
-  
+
+
   #-------------------------------
   # for open shell systems: beta
   #---
@@ -595,9 +599,10 @@ else:
     x[i] = xmin + xstep*float(i)
   
   for i_mos in range(0,len(all_c[0,:])):
-    if "_b" in qc.mo_spec[i_mos]["sym"]:                      #: select only beta-spin orbitals
+    if "_b" in qc.mo_spec[selected_MO[i_mos]-1]["sym"]:                      #: select only beta-spin orbitals
       for l in range(0, lmax+1):
-        gx[:,l] += all_c[l,i_mos] * (1./(sigma*numpy.sqrt(2.*numpy.pi))) * numpy.exp(-(1./(2.*sigma**2.))*(x[:] - 27.21138602*qc.mo_spec[i_mos]['energy'])**2.)
+        gx[:,l] += all_c[l,i_mos] * (1./(sigma*numpy.sqrt(2.*numpy.pi))) * numpy.exp(-(1./(2.*sigma**2.))*(x[:] - 27.21138602*qc.mo_spec[selected_MO[i_mos]-1]['energy'])**2.)
+        #print (gx[:,l])
   
   #-------------------------
   # write x and gx to file 

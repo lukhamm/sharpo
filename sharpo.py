@@ -572,7 +572,7 @@ else:
     if "_a" in qc.mo_spec[selected_MO[i_mos]-1]["sym"]:                      #: select only alpha-spin orbitals
       for l in range(0, lmax+1):
         gx[:,l] += all_c[l,i_mos] * (1./(sigma*numpy.sqrt(2.*numpy.pi))) * numpy.exp(-(1./(2.*sigma**2.))*(x[:] - 27.21138602*qc.mo_spec[selected_MO[i_mos]-1]['energy'])**2.)
-        print (gx[:,l])
+        #print (gx[:,l])
                                                                 #: gaussian function centred at orbital 
                                                                 #  energy (qc.mo_spec[i_mos]['energy'])
                                                                 #  of orbital i_mos with angular quantum

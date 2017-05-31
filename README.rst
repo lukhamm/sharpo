@@ -54,11 +54,11 @@ git or using a zip archive.
 No additional installation of sharpo is necessary. Once you got your copy of the
 code you can run sharpo e.g. directly from the command line in a terminal with::
 
-$ python sharpo.py
+$ python sharpo
 
 or even on its own by typing::
 
-$ sharpo.py
+$ ./sharpo
 
 Linux 
 .....

@@ -313,7 +313,7 @@ def func(x_array,*args):
   # get MOs from Orbkit
   #---
   #print ("Will try to use: ", args[8], "processors.") 
-  # <- unfortunately no gain in using more cores / does not work
+  # <- unfortunately no gain in using more cores / does not work (bug in orbkit?)
   if (energy_range_is_set):
     #orb, mo_info = extras.calc_mo(qc, selected_MO, drv=None)       # <- this seems to be much slower
     orb = core.rho_compute(qc_select,                               #    even slower than core.rho_compute for all orbitals...
